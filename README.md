@@ -2,9 +2,11 @@
 
 This is a repo containing the demos displayed at the June 2018 Silicon Valley Cloud-Native and Kubernetes Meetup in Sunnyvale, CA.
 
+Please keep in mind billing applies to resources created in GCP. 
+
 ### Kubernetes Basics
 
-This section assumes that you have created a GKE cluster. If you have not, feel free to use the [gke](/infrastructure/gke.sh) script in this repo to create a cluster.
+This section assumes that you have created a GKE cluster. If you have not, see the documentation [here](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster).
 
 Create a Kubernetes Pod with an nginx container. This will be controlled by the Deployment controller, guaranteeing 1 replica of the Pod and a defined upgrade strategy.
 
@@ -43,6 +45,8 @@ kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 [This](https://cloud.google.com/kubernetes-engine/docs/how-to/multi-cluster-ingress) tutorial demonstrates how to get up and running with Kubemci.
 
 ### GPUs "as a service" with GPU Node Pools
+
+[This](https://cloud.google.com/kubernetes-engine/docs/concepts/gpus#gpu_pool) tutorial shows you how to add a GPU Node Pool to your existing GKE cluster.
 
 Create a workload that requires GPU resources. Observe this requirement in the existing manifest for a Pod titled gpu-pod.
 
