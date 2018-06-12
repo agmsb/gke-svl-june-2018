@@ -2,7 +2,7 @@
 
 This is a repo containing the demos displayed at the June 2018 Silicon Valley Cloud-Native and Kubernetes Meetup in Sunnyvale, CA.
 
-Please keep in mind billing applies to resources created in GCP. 
+Please keep in mind billing applies to resources created in GCP. This is NOT an official Google product or tutorial.
 
 ### Kubernetes Basics
 
