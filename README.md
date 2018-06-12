@@ -23,7 +23,7 @@ kubectl get deployments,rs,pods
 Expose that nginx container to the public on port 80 with a Kubernetes Service, type=LoadBalancer. On Google Cloud Platform, this will front your nginx Pod with a Layer 3/4 Network Load Balancer.
 
 ```
-kubectl expose deploy/nginx-demo --type=LoadBalancer --port=80
+kubectl expose deploy nginx-demo --type=LoadBalancer --port=80
 ```
 
 View how the Endpoint controller maps the pod IP addresses to the Service. This Service will be the stable method for accessing the Pods, which are theoretically ephemeral and replacable. 
@@ -37,7 +37,7 @@ We also get a FQDN from our services so that we can resolve DNS local to our Kub
 ```
 kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 
-# nslookup $svc
+# nslookup nginx-demo
 ```
 
 ### Global Presence with Multi-Cluster Ingress, aka Kubemci
